@@ -1,11 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bus Ticket</title>
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+              rel="stylesheet">
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!-- Header and Menu Section -->
+        <header class="container">
+            <nav>
+                <ul>
+                    <li><a id="home" href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a class="active" href="#">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- Booking Section -->
+        <main class="main-content container">
+            <div class="booking-content">
+                <h1>Mega City Bus</h1>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+            </div>
+            <div id="booking-form">
+                <div id="form">
+                    <h3>Explore By Bus</h3>
+                    <div class="inputs">
+                        <div class="input-group">
+                            <label" for="">From</label>
+                            <input class="inp-style" type="text" name="" placeholder="Dhaka">
+                        </div>
+                        <div class="input-group">
+                            <label" for="">From</label>
+                            <input class="inp-style" type="text" name="" placeholder="Chittagone">
+                        </div>
+                    </div>
+                    <div class="inputs">
+                        <div class="input-group">
+                            <label" for="">Departure</label>
+                            <input class="inp-style" type="date" name="">
+                        </div>
+                        <div class="input-group">
+                            <label for="">Return</label>
+                            <input class="inp-style" type="date" name="">
+                        </div>
+                    </div>
+                    <div class="inputs">
+                        <div class="input-group f-class">
+                            <div>
+                                <!-- added id in span tag for making it easier to update price -->
+                                <label for="">First Class ($<span id="firstClassPrice">150</span>)</label>
+                                <input id="fcTicket" class="inp-style inp-width" type="number" value="0" name="">
+                            </div>
+                            <div class="input-group">
+                                <button id="fcPlusBtn" class="plus-minus-btn">+</button>
+                                <button id="fcMinusBtn" class="plus-minus-btn">-</button>
+                            </div>
+                        </div>
+                        <div class="input-group f-class">
+                            <div>
+                                <label for="">Economy ($<span id="ecoPrice">100</span>)</label>
+                                <input id="ecoTicket" class="inp-style inp-width" type="number" name="" value="0">
+                            </div>
+                            <div class="input-group">
+                                <button id="ecoPlusBtn" class="plus-minus-btn">+</button>
+                                <button id="ecoMinusBtn" class="plus-minus-btn">-</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="calculations">
+                        <div class="amount">
+                            <div class="left">
+                                <p>Subtotal</p>
+                            </div>
+                            <div class="right">
+                                <p>$<span id="subtotal">0</span></p>
+                            </div>
+                        </div>
+                        <div class="amount">
+                            <div class="left">
+                                <p>Charge <span id="vatPercentage">10</span>% VAT</p>
+                            </div>
+                            <div class="right">
+                                <p>$<span id="vat">0</span></p>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="amount">
+                            <div class="left">
+                                <h4>Total</h4>
+                            </div>
+                            <div class="right">
+                                <p>$<span id="total">0</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="book-btn" class="btn-style">Book Now</button>
+                </div>
+                <div id="success-form">
+                    <img src="./images/success.jpeg" alt="" />
+                    <h3>Your order has been taken successfully</h3>
+                    <h3>You have ordered <span id="orderFcTicket">0</span> first class tickets, <span id="orderEcoTicket">0</span> economic tickets. Total price $<span id="orderTotal">0</span>.</h3>
+                    <h5>Click home to go back</h5>
+                </div>
+            </div>
+        </main>
+        <!-- Thank You -->
+        <script type="text/javascript" src="app.js">
+        </script>
+    </body>
 </html>
